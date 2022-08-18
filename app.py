@@ -171,7 +171,7 @@ def booktable():
                 con.commit()
                 con.close()
                 session.clear()
-                return render_template('tablebook.html')
+                return render_template('login.html')
     return render_template('menu.html')
 
 '''Here user simply logout from the main menu page'''
