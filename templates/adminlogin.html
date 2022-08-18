@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='/css/adminlogin.css')}}">
+    <title>admin login</title>
+
+</head>
+<body>
+<header>
+    <nav class="navigation">
+
+        <ul>
+            <li><a href="/about" target="_self">About</a></li>
+            <li><a href="/contact" target="_self">Contact Us</a></li>
+            <li><a href="/signup" target="_self">Sign Up</a></li>
+            <li><a href="/adminlogin">Admin login</a></li>
+            <li><a href="/" target="_Self"> Home </a></li>
+            <div class="Heading">
+                <p>BOOK MY TABLE</p>
+
+            </div>
+
+        </ul>
+    </nav>
+</header>
+
+
+<center>
+    <form action="/adminlogin" class="loginform" method="post">
+        <br>
+        <h1 align="center">Admin Login</h1>
+
+        <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input id="username" name="username" placeholder="Enter Username" required
+                   style="background-color: grey;" type="text">
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input id="psw" name="psw" placeholder="Enter Password" required style="background-color: grey;"
+                   type="password">
+            <br>
+            <button type="submit">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {% if error %}
+            <h4>{{error}}</h4>
+            {% endif %}
+        </div>
+    </form>
+</center>
+
+
+</body>
+</html>

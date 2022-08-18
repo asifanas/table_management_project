@@ -1,0 +1,68 @@
+body {font-family: Arial, Helvetica, sans-serif;
+		background:Url("/static/image/projectRes.jpg") no-repeat;
+		background-size:cover;
+
+	}
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+*{text-decoration: none; color:white;}
+
+form {width: 35%;
+}
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid;
+  box-sizing: border-box;
+  margin-bottom:20px;
+}
+
+button {
+  background-color: orange;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius:20px;
+  cursor: pointer;
+  width: 25%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.loginform{
+background-color:black;
+margin-top:80px;
+}
+
+.container {
+  padding: 20px;
+}
+
+
+.navigation{
+background-color:black;
+border-radius: 30px;
+}
+
+.navigation ul{
+overflow:auto;
+}
+
+.navigation li{
+float:right;
+list-style: none;
+margin: 15px 30px;
+}
+
+.naviagtion li a{
+padding: 3px 3px;
+}
+

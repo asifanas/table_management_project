@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{url_for('static',filename='/css/menu.css')}}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <title>menu</title>
+</head>
+<body>
+<div class="class1">
+
+    <marquee class="h2class1" data-text="BOOK MY TABLE" direction='down' scrollamount=2>BOOK MY TABLE</marquee>
+
+    <div class="class11">
+        <img height="100" src="/static/image/profileicon.jpg" style="margin-left:30%; margin-top:5%" width="100">
+        <h3 style="color:grey; margin-left:15%">{{username}}</h3>
+        <h3 style="color:grey; margin-left:15%">{{namelogin}}</h3>
+        <h3 style="color:grey; margin-left:15%">{{email}}</h3>
+    </div>
+
+    <div class="class12">
+
+        <form action="/menu" class='menuform' method='post'>
+            <h2 style="color:grey; margin-left: 4px;">WELCOME!</h2>
+            <label for="membercount"><b>Number of People:</b></label>
+            <input id="membercount" max="5" min="1" name="membercount" placeholder="between 1 to 5" required=""
+                   type="number"><br>
+            <br>
+
+            <label for="choosedate"><b>Choose Date:</b></label>
+            <input id="choosedate" name="date" placeholder="Enter the date" required="" type="Date"><br><br>
+
+            <script type="text/javascript">
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0');
+                var yyyy = today.getFullYear();
+
+                today = yyyy + '-' + mm + '-' + dd;
+                $('#choosedate').attr('min',today);
+
+
+
+
+
+
+
+            </script>
+
+            <label for="starttime"><b>visiting time</b></label>
+            <input id="starttime" name="visitingtime" placeholder="visiting time" required type="time"><br>
+
+
+            <button class="button" type="submit"><b>Check Availability</b></button>
+
+
+        </form>
+
+    </div>
+
+    <div class="class13">
+        <form action="/tablebook" method="post">
+            {% for i in list %}
+            <input id="list" name="tablename" type="radio" value="{{i}}" required>
+            <label for="list">{{i}}</label><br>
+            {% endfor %}
+            {% if list %}
+            <button class="button" type="submit"><b>Book Now</b></button>
+            {% else %}
+            <h3>{{pop}}</h3>
+            {% endif %}
+
+            {% if booked %}
+            <h3 style="color:">{{booked}} you have already book {{tablenumber}}</h3>
+            <h3>date of booking:{{datebook}}</h3>
+            <h3>time of visiting:{{timebook}}</h3>
+            {% endif %}
+
+        </form>
+
+    </div>
+
+    <div action="/logout" class="class14">
+        <form>
+            <button type="submit"><b>logout</b></button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

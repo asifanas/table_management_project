@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    <link href="{{url_for('static', filename = '/css/signup.css')}}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <nav class="navigation">
+
+        <ul>
+            <li><a href="/about" target="_self">About</a></li>
+            <li><a href="/contact" target="_self">Contact Us</a></li>
+            <li><a href="/signup" target="_self">Sign Up</a></li>
+            <li><a href="/adminlogin" target="_self">Admin login</a></li>
+            <li><a href="/" target="_Self"> Home </a></li>
+            <div class="Heading">
+                <p>BOOK MY TABLE</p>
+
+            </div>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="signup">
+    <form action="/signup" class="signupform" method="post">
+        <br>
+        <h1 align="center">Sign up</h1>
+
+        <label for="username"><b>Username</b></label>
+        <input id="username" name="username" placeholder="Enter Username" required
+               style="background-color: grey;" type="text">
+        <br>
+        <label for="firstname"><b>First Name</b></label>
+        <input id="firstname" name="firstname" placeholder="firstname" required
+               style="background-color: grey;" type="text">
+        <br>
+        <label for="lastname"><b>Last Name</b></label>
+        <input id="lastname" name="lastname" placeholder="lastnamae" required
+               style="background-color: grey;" type="text">
+        <br>
+        <label for="email"><b>Email</b></label>
+        <input id="email" name="email" placeholder="Enter Email" required style="background-color: grey;"
+               type="email">
+        <br>
+        <label for="mobile"><b>Contact Number</b></label>
+        <input id="mobile" name="contactnumber" placeholder="Enter Phone Number"
+               required style="background-color: grey;" type="tel"><br>
+        <label for="nationality"><b>Nationality</b></label>
+        <input id="nationality" name="nationality" placeholder="Nationality" required
+               style="background-color: grey;" type="text"><br>
+        <label for="psw"><b>Password</b></label>
+        <input id="psw" name="password" placeholder="Make Password" required
+               style="background-color: grey;" type="text">
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>

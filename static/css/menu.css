@@ -1,0 +1,107 @@
+
+.class1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:grey;
+	width: 100%;
+    height: 100%;
+}
+
+
+.h2class1{
+	margin: 3px;
+	float: left;
+font-size:5vw;
+color: #252839;
+-webkit-text-stroke: 0.3vw #383d52;
+}
+
+.class11{
+	position: absolute;
+	top:15%;
+	left:0;
+	width: 20%;
+	height: 85%;
+	color: white;
+
+	background-color: white;
+}
+
+.class12{
+	position: absolute;
+	top:15%;
+	left:20%;
+	width: 40%;
+	height: 85%;
+	color:white;
+}
+
+.class13{
+	position: absolute;
+	top:15%;
+	left:60%;
+	width: 40%;
+	height: 85%;
+	background-color: rgba(10,10,30,1);
+}
+
+.class14{
+	position: absolute;
+	top:3%;
+	left:78%;
+	width: 30%;;
+	
+}
+
+
+input[type=number], input[type=date], input[type=time] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  color:grey;
+  display: inline-block;
+  border: 1px solid;
+  box-sizing: border-box;
+  margin-bottom:20px;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+
+.menuform {
+	position: absolute;
+	top: 0 ;
+	left: 0 ;
+background-color: black;
+width: 100%;
+height: 100%;
+}
+
+
+button {
+  background-color: orange;
+  padding: 14px 20px;
+  border-radius:20px;
+  cursor: pointer;
+  width: 30%;
+  margin-left:35%;
+  text-align: center
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+
+
+label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+    }

@@ -1,0 +1,52 @@
+body{
+	background: ;
+}
+
+
+.list-group-item{
+	margin-top:10px;
+	border-radius: 10px;
+	background: white;
+	width:50%;
+	margin-left: 25%;
+	cursor: pointer;
+	transition: all 0.8s ease-in-out;
+}
+
+.list-group-item:hover{
+	transform: scaleX(1.1);
+}
+
+
+button {
+  background-color: orange;
+  padding: 7px 10px;
+  border-radius:20px;
+  cursor: pointer;
+  width: 15%;
+  margin-left:25%;
+  text-align: center
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+
+.h1class{
+	margin: 0;
+	float: left;
+font-size:3vw;
+color: #252839;
+-webkit-text-stroke: 0.3vw #383d52;
+}
+
+.final{
+position:absolute;
+top:20px;
+left:81%;
+right:0px;
+float:right;
+ width: 35%;
+}
+

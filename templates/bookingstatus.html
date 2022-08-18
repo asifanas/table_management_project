@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{url_for('static',filename='/css/bookingstatus.css')}}" rel="stylesheet" type="text/css">
+    <title>bookingstatus</title>
+</head>
+<body>
+<h1 class="h1class">BOOK MY TABLE</h1><br><br>
+<div class="container d-flex justify-content-center">
+    <ol typle="1" class="list">
+        {% if size !=0 %}
+        {% for i in range(0, size) %}
+        <li class="list-group-item d-flex justify-content-between align-content-center">
+            <h2 class="h2class">Name: {{l[i][0]}} {{l[i][1]}}</h2>
+            <h3 class="h3class">Contact Number: {{l[i][2]}}</h3>
+            <h3 class="h3clas">Table Number: {{l[i][3]}}</h3>
+            <h5 class="h5class">Date: {{l[i][5]}}</h5>
+            <h5 class="h5class">Number of people: {{l[i][4]}}</h5>
+            <h5 class="h5class">Time of visit: {{l[i][6]}}</h5>
+
+            <form action="/delete" method="post">
+                <input type="checkbox" id="deletecheckbox" name="deletion" value="{{l[i][3]}}" required>
+                <lable for="deletecheckbox">Confirm to delete</lable>
+                <button type="submit"><b>delete</b></button>
+            </form>
+
+        </li>
+        {% endfor %}
+        {% else %}
+        <h1>{{"There is no table booked"}}</h1>
+        {% endif %}
+
+        <div class="final">
+            <form action="/logout">
+
+                <button type="submit"><b>Logout</b></button>
+            </form>
+
+        </div>
+
+
+    </ol>
+</div>
+
+</body>
+</html>
